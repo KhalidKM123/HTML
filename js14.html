@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Guess</title>
+    </head>
+    <body>
+       <h1>Guessing Application</h1>
+        <script>
+            var randomno = Math.floor((Math.random() * 50) + 1);
+            var guessno = parseInt(prompt('Guess a number between 1 to 50'));
+            if(randomno == guessno){
+              alert('YOU WON YEAHHHH ');
+            } 
+            else{
+                alert('BETTER LUCK NEXT TIME'+" "+guessno +" "+randomno);
+            }
+        </script>
+    </body>
+</html>

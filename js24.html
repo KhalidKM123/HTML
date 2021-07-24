@@ -1,0 +1,106 @@
+	<html>
+<head>
+<title>Loops Demo</title>
+</head>
+<style>
+#res{
+background-color:cyan;
+}
+</style>
+<body>
+<h1><marquee>Finding the power</marquee></h1>
+<center> <input type="text" placeholder="Enter number" id='n1'>
+<input type="text" placeholder="Enter power" id='n2'>
+<button onclick="power()">FIND POWER</button></center>
+<br>
+<hr>
+<center><div id = 'res'></div></center>
+<script type="text/javascript">
+// hello
+function power()
+{
+var count = 1;//start
+var n1ele = document.getElementById('n1');
+var n2ele = document.getElementById('n2');
+var no = parseInt(n1ele.value)//3
+var p = parseInt(n2ele.value)//4
+var res = 1;
+while(count <= p)// 5 <= 4
+{
+res = res * no //27 * 3 = 81
+count++;//5
+}
+var divele = document.getElementById('res')
+divele.innerHTML = '<h1>'+no+' to the power of '+p +' = '+res+'</h1>';
+}
+
+</script>
+</body>
+</html>
+<html>
+<head>
+    <title>String Demo</title>
+    <style>
+        #heading{
+            color:blueviolet;
+            padding: 40px;
+            border-bottom: 5px solid black;
+            text-align: center;
+        }
+        input{
+            width:150px;
+            height: 40px;
+            text-align: center;
+        }
+        button,select{
+            width:150px;
+            height: 40px;
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+        #message{
+            padding: 20px;
+            text-align: center;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+<h1 id='heading'>Random Message Generator</h1>
+<div>
+   <h1>Enter your name and select your choice of color</h1>
+   <input type="text" placeholder="Enter name" id='name'/>
+   
+       <select id='choose'>
+           <option>RED</option>
+           <option>GREEN</option>
+           <option>BLUE</option>
+           <option>YELLOW</option>
+           <option>PINK</option>
+           <option>ORANGE</option>
+       </select>
+
+   
+   <button onclick="add()">ENTER</button>
+</div>
+<hr>
+<div id='message'>
+   
+</div>
+<script type="text/javascript">
+var messages =['You are one of the great Example', 'You Believe in yourself','You are an inspiration to so many','You can achieve anything you want','You are very adorable and funny'];
+        var selectele = document.getElementById('choose');
+        var message = document.getElementById('message');
+        function add()
+        {  
+            var name = document.getElementById('name').value;
+            var selectedcolor = selectele.value;
+            message.style.backgroundColor = selectedcolor
+            var msg = messages[Math.floor(Math.random() * messages.length)]
+            var displayMessage = '<h1>'+name[0].toUpperCase() + name.substr(1) +","+'</h1> '+msg
+            message.innerHTML='<h3>'+displayMessage+'</h3>'
+        }
+       
+</script>
+</body>
+</html>

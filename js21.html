@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>toDoList</title>
+    <style>
+        input[type='text']
+        {
+
+          width: 310px;
+          height: 30px;
+          outline: 0;
+          font-size: 1.5em;
+          background: #fff;
+          color: #2f4f4f;
+        }
+        table{
+            border: 2px solid black;
+            width:100%;
+            margin-top: 30px;
+
+            border-collapse: collapse;
+        }
+        th,td{
+            border:2px solid black;
+            padding: 20px;
+        }
+        button{
+            width:200px;
+            padding: 10px;
+            margin-top: 20px;
+            font-size: 20px;
+background-color:red;
+color:gold;
+font-style:italics;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+        <h1>Plese enter Student's details:</h1>
+        <input type="text" placeholder="Student name" id='name'/>
+        <input type="text" placeholder="Student email" id='email'/>
+        <input type="text" placeholder="Student phone" id='phone'/>        
+<input type="text" placeholder="Student lastname" id='id'/>
+<input type="text" placeholder="Grade" id='grade'/>
+
+<div>
+            <button onclick="add()">Add Student</button>
+        </div>
+        <div class="tables">
+            <table>
+                <tr>
+                    <th>Name</th>
+                     <th>Email</th>
+                      <th>Phone</th>
+                       <th>lastname</th>
+                       <th>Grade</th>  
+ 
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script>
+function add()
+{
+    var name = document.getElementById('name');
+    var email = document.getElementById('email');
+    var phone = document.getElementById('phone');
+   var id = document.getElementById('id');
+   var grade = document.getElementById('grade');
+
+    var sname = name.value;
+    var semail = email.value;
+    var sphone = phone.value;
+var sid     = id.value;
+var sgrade     = grade.value;
+
+    if(sname != '' && sphone != '' && semail != '' && sid !='' &sgrade!= ' ')
+        {
+            let table = document.querySelector('table');
+            let tr = document.createElement('tr');
+            let tdname = document.createElement('td');
+            let tdemail = document.createElement('td');
+            let tdphone = document.createElement('td');
+let tdid = document.createElement('td');
+let tdgrade = document.createElement('td');
+
+              tdname.innerHTML = sname;
+            tdemail.innerHTML = semail;
+            tdphone.innerHTML = sphone;
+   tdid.innerHTML = sid;
+tdgrade.innerHTML = sgrade;
+
+tr.appendChild(tdname);
+            tr.appendChild(tdemail);
+            tr.appendChild(tdphone);
+   tr.appendChild(tdid);
+tr.appendChild(tdgrade);
+
+            table.appendChild(tr);
+        }
+    else{
+        alert('Please add all details');
+    }
+}
+</script>
+  </body>
+  </html>

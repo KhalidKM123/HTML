@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>toDoList</title>
+    <style>
+        input[type='text']
+        {
+
+          width: 310px;
+          height: 30px;
+          outline: 0;
+          font-size: 1.5em;
+          background: #fff;
+          color: #2f4f4f;
+        }
+        table{
+            border: 2px solid black;
+            width:100%;
+            margin-top: 30px;
+
+            border-collapse: collapse;
+        }
+        th,td{
+            border:2px solid black;
+            padding: 20px;
+        }
+        button{
+            width:200px;
+            padding: 10px;
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+        <h1>Plese enter START and END VALUES => TO DISPLAY SQUARES AND CUBES</h1>
+        <input type="text" placeholder="Enter start value" id='start'/>
+        <input type="text" placeholder="Enter end value" id='end'/>
+       
+        <div>
+            <button onclick="display()">DISPLAY</button>
+        </div>
+        <div class="tables">
+            <h6>NO           Square           Cube</h6>
+        </div>
+    </div>
+    <script>
+      function display(){
+          var start = parseInt(document.getElementById('start').value);
+          var end = parseInt(document.getElementById('end').value);
+          var ele = document.querySelector('.tables')
+          for(var i=start; i<=end;i++)
+         
+          {
+              var childele = document.createElement('h1')
+              childele.innerHTML = i+" "+i*i+" "+i*i*i;
+              ele.appendChild(childele);
+          }
+      }
+      </script>
+  </body>
+ 
+</html>

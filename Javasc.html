@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  color: white;
+  -webkit-animation: mymove 2s infinite linear alternate; /* Chrome, Safari, Opera */
+  animation: mymove 2s infinite linear alternate;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+  to {-webkit-transform: rotateX(180deg);}
+}
+
+@keyframes mymove {
+  to {transform: rotateX(180deg);}
+}
+</style>
+</head><body>
+
+<p>Check/uncheck the checkbox to change the backface-visibility of the animated DIV element:</p>
+<div id="myDIV">
+  <h1>Hello</h1>
+</div>
+
+<input type="checkbox" onclick="myFunction(this)" checked>backface-visibility
+
+<script>
+function myFunction(x) {
+  if (x.checked === true) {
+    document.getElementById("myDIV").style.WebkitBackfaceVisibility = "visible"; 
+    document.getElementById("myDIV").style.backfaceVisibility = "visible";
+  } else {
+    document.getElementById("myDIV").style.W
+ebkitBackfaceVisibility = "hidden"; 
+    document.getElementById("myDIV").style.backfaceVisibility = "hidden";
+  }
+}
+</script>
+</body>
+</html>
+</html>

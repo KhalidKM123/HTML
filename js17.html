@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>UP DOWN</title>
+        <style>
+            body{
+                background-color: burlywood;
+            }
+            h1{
+                padding: 30px;
+                background-color: #987654;
+                color:black;
+                text-align: center;
+                border: 3px solid black;
+            }
+            #output{
+                color:mediumvioletred;
+                font-size: 40px;
+            }
+            
+#rules{
+                padding: 20px;
+                font-size: 20px;
+                color: brown;
+                font-family: sans-serif;
+            }
+            #rules button{
+                width:100px;
+                height: 40px;
+                background-color: black;
+                color: white;
+                font-size: 0.9em;
+            }
+        </style>
+    </head><div id='output'>
+       <p id='result'>Result : </p>
+        </div>
+        <script>
+               
+                var ele = document.getElementById('result');
+                var randomno1 = Math.floor((Math.random() * 6) + 1);
+                var randomno2 = Math.floor((Math.random() * 6) + 1);
+                 alert('You have to guess what will be the sum of 2 dices when rolled. Select the appropriate number against the options given below, Whether it will b:\n 1. <7\n 2. >7 \n3. ==7');
+  
+var guessno = parseInt(prompt('Please enter your choice?'));
+                var sum = randomno1 + randomno2;
+                alert('Sum of 2 dices rolled : '+sum)
+                if(sum < 7 && guessno == 1){
+                  ele.innerHTML = ele.innerHTML+ ' YOU WON';
+                } 
+                else if(sum > 7 && guessno == 2){
+                  ele.innerHTML = ele.innerHTML+ ' YOU WON';
+                } 
+            else if(sum == 7 && guessno == 3){
+                  ele.innerHTML = ele.innerHTML+ ' YOU WON';
+                } 
+                else{
+                    ele.innerHTML = ele.innerHTML+ ' TRY YOUR LUCK NEXT TIME';
+                }
+            
+        </script>
+    </body>
+</html>

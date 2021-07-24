@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>Style BAckground</title>
+        <style>
+            .buttons{
+                width:100%;
+                text-align: center;
+                padding: 20px;
+                margin-bottom: 20px;
+                background-color: red;
+            }
+            .buttons button{
+                width:150px;
+                padding: 10px;
+                font-weight: bold;
+                font-size: 20px;
+            }
+            .red{
+                background-color: red;
+               
+            }
+            .red button{
+                color:red;
+            }
+            .yellow{
+                background-color: yellow;
+            }
+            .yellow button{
+                color: yellow;
+            }
+           
+            .blue {
+                background-color: blue;
+            }
+            .blue  button{
+                color: blue;
+            }
+.pink {
+                background-color: pink;
+            }
+            .pink  button{
+                color: pink;
+            }
+.green {
+                background-color: green;
+            }
+            .pink  button{
+                color: pink;
+            }
+           
+            </style>
+    </head>
+    <body>
+        <h1>Change background color dynamically</h1>
+        <p>Click on any of the buttons below and see the background color of this webpage change accordingly</p>
+        <div class='buttons red' onclick="changeRed()"><button>RED</button></div>
+        <div class='buttons yellow' onclick="changeYellow()"><button>YELLOW</button></div>
+        <div class='buttons blue' onclick="changeBlue()"><button>BLUE</button></div>
+        <div class='buttons green' onclick="changeGreen()"><button>GREEN</button></div>
+        <div class='buttons pink' onclick="changePink()"><button>PINK</button></div>
+
+        <script>
+        function changeRed()
+            {
+                document.body.style.backgroundColor = 'red';
+            }
+            function changeYellow()
+            {
+                document.body.style.backgroundColor = 'yellow';
+            }
+            function changeBlue()
+            {
+                document.body.style.backgroundColor = 'blue';
+            }
+            function changeGreen()
+            {
+                document.body.style.backgroundColor = 'green';
+            }
+function changePink()
+            {
+                document.body.style.backgroundColor = 'pink';
+            }
+           
+            </script>
+    </body>
+</html>

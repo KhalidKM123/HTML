@@ -1,0 +1,29 @@
+
+<html>
+    <head>
+        <title>Simple Calculator</title>
+        <style>
+            input{
+                width:80px;
+                height: 40px;
+                margin-right: 20px;
+            }
+            body{
+                background-color: blue;
+                color: cyan;
+            }
+            span{
+                font-size: 20px;
+                margin-right: 20px;
+            }
+        </style>
+    </head>
+    </body>
+         <input type="text" id='no1' value="0" onblur="res.innerHTML=parseInt(this.value) / parseInt(no2.value)">
+        <span>/</span>
+        <input type="text"  value="0" id='no2' onblur="res.innerHTML=parseInt(this.value) / parseInt(no1.value)">
+        <span>=</span>
+        <span id='res'>Result : </span>
+       
+    </body>
+</html>

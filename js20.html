@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Timer Events</title>
+        <style>
+            button{
+                width:100px;
+                height: 40px;
+                background-color:bisque;
+                color:crimson;
+                margin-top: 30px;
+            }
+            #content{
+                padding: 20px;
+                background-color: chocolate;
+                color: white;
+                width: 70%;
+                margin: auto;
+                text-align: center;
+            }
+            img{
+                width: 800px;
+                height: auto;
+            }
+            #p1{
+                font-size: 1.2em;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Find six differences between 2 images before time's UP...</h1>
+        <div id='content'>
+        <p>
+            CLick on start button to load the image. If you got the answer, press the stop button. You get 1 minute to solve this puzzle
+        </p>
+        <p id='p1'>GET SET GO.. HIT THE START BUTTON</p>
+           <img id='puzzle'/>
+           <img id='answer'/>    
+            </div>
+        <div>
+            <button onclick="start()">START</button>
+     
+            <button onclick="stop()">STOP</button>
+        </div>
+        <script>
+            //http://twominfun.com/tag/spot-the-difference-between-two-pictures-with-answers/
+        var ele = document.getElementById('p1');
+        var img1 = document.getElementById('puzzle');
+        var timeup;
+        function start()
+        {
+            img1.setAttribute('src','Labyrinth.png');
+            timeup = setTimeout(function(){
+                ele.innerHTML = ' SORRY TIMES UP, HERE IS THE SOLUTION';
+                ele.style.color = 'yellow';
+                 img1.setAttribute('src','LabyrinthA.png');
+            },60000)
+        }
+
+        function stop()
+        {
+            clearTimeout(timeup);
+            ele.innerHTML = ' GOOD JOB, HERE IS THE SOLUTION';
+            ele.style.color = 'blue';
+             img1.setAttribute('src','LabyrinthA.png');
+        }
+        </script>
+
+    </body>
+</html>

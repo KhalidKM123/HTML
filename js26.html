@@ -1,0 +1,69 @@
+<html>
+<head>
+    <title>Temp Converter</title>
+    <style>
+        body{
+            margin: 30px;
+        }
+        input{
+            width:150px;
+            height: 40px;
+            text-align: center;
+        }
+        button,select{
+            width:150px;
+            height: 40px;
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+        #message{
+            padding: 20px;
+            text-align: center;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+<h1 id='heading'>Temperature Converter</h1>
+<div>
+   <h1>Enter temperature either in Fahrenheit or Celcius</h1>
+   <input type="text" placeholder="Enter tempertaure value" id='tvalue'/>
+   <h3>Select whether temperature entered is in fahrenheit or celcius</h3>
+   <input type="radio"  name='temp' id='fah'/> Fah &nbsp;&nbsp;
+        <input type="radio"  name='temp'/ id='cel'> Cel &nbsp;&nbsp;
+       
+   <button onclick="convert()">Convert Temp</button>
+</div>
+<hr>
+<div id='message'>
+   
+</div>
+<script type="text/javascript">
+
+       
+        function convert()
+        {
+            var tempele = document.getElementById('tvalue');
+            var fahEle = document.getElementById('fah');
+            var celEle = document.getElementById('cel');
+            var message = document.getElementById('message');
+            var tempValue = parseInt(tempele.value);
+           
+            if(fahEle.checked)
+                {
+                    var c = (tempValue - 32) * 5/9;
+                    message.innerHTML = tempValue+' deg fah = '+c+' deg celcius';
+                }
+            if(celEle.checked)
+                {
+                    var f = tempValue * 9/5 + 32;
+                    message.innerHTML = tempValue+' deg cel = '+f+' deg fah';
+                }
+        }
+       
+       
+       
+       
+</script>
+</body>
+</html>

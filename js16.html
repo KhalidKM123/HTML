@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Km to m Conversion</title>
+    </head>
+    <body>
+       <h1>Conversion Calculator</h1>
+       <p id='result'></p>
+        <script>
+            var ele = document.getElementById('result');
+            alert('Please select option 1 or 2 or 3 or 4 for the below:\n 1. Km to m\n2.m to km \n '
+        var choice = parseInt(prompt('Enter your choice'));
+   
+if(choice==1)
+                {
+                     var kms = parseInt(prompt('Enter value in kms'));
+                    var kms2ms = kms * 1000;
+                    ele.innerHTML = kms+' kms = '+kms2ms+' metres'
+                }
+            else if(choice==2)
+                {
+                     var ms = parseInt(prompt('Enter value in metres'));
+                    var ms2kms = ms / 1000;
+                    ele.innerHTML = ms+' ms = '+ms2kms+' kms'
+                }
+                else if(choice==3)
+                {
+                     var ltr = parseInt(prompt('Enter value in litres'));
+                    var ltr2ml = ltr * 1000;
+                    ele.innerHTML = ltr+' ltr = '+ltr2ml+' metres'
+                }
+                else
+                alert("wrong choice");
+
+
+        </script>
+    </body>
+</html>

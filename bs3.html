@@ -1,0 +1,78 @@
+<html>
+<head>
+<title>Bootstrap Form</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+h3{
+padding: 20px;
+}
+h1{
+text-align:center;
+}
+</style>
+</head>
+<body>
+<h1 id='heading' class="text-primary jumbotron">Bootstrap Form Demos</h1>
+<div class = 'container-md'>
+<h3>Form Horizontal Layout</h3>
+<form>
+<div class="form-group">
+<label for="inputEmail">Email</label>
+<input type="email" class="form-control" id="inputEmail" placeholder="Email">
+</div>
+<div class="form-group">
+<label for="inputPassword">Password</label>
+<input type="password" class="form-control" id="inputPassword" placeholder="Password">
+</div>
+<div class="form-group">
+<label class="form-check-label"><input type="checkbox"> Remember me</label>
+</div>
+<button type="submit" class="btn btn-warning">Sign in</button>
+</form>
+<h3>Form Vertical Layout</h3>
+<form>
+<div class="form-group row">
+<label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+<div class="col-sm-10">
+<input type="email" class="form-control" id="inputEmail" placeholder="Email">
+</div>
+</div>
+<div class="form-group row">
+<label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+<div class="col-sm-10">
+<input type="password" class="form-control" id="inputPassword" placeholder="Password">
+</div>
+</div>
+<div class="form-group row">
+<div class="col-sm-10 offset-sm-2">
+<label class="form-check-label"><input type="checkbox"> Remember me</label>
+</div>
+</div>
+<div class="form-group row">
+<div class="col-sm-10 offset-sm-2">
+<button type="submit" class="btn btn-danger">Sign in</button>
+</div>
+</div>
+</form>
+<h3>
+Form Inline Layout
+</h3>
+<form class="form-inline">
+<div class="form-group mr-2">
+<label class="sr-only" for="inputEmail">Email</label>
+<input type="email" class="form-control" id="inputEmail" placeholder="Email">
+</div>
+<div class="form-group mr-2">
+<label class="sr-only" for="inputPassword">Password</label>
+<input type="password" class="form-control" id="inputPassword" placeholder="Password">
+</div>
+<div class="form-group mr-2">
+<label><input type="checkbox" class="mr-1"> Remember me</label>
+</div>
+<button type="submit" class="btn btn-Success">Sign in</button>
+</form>
+</div>
+
+</body>
+</html>

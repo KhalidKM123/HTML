@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Functions</title>
+    </head>
+    <body>
+       <h1>Let's learn to create reusable code</h1>
+       <div>
+         <p id='time'>Time : </p>
+          <h3>Click the button to display the current time on the screen</h3>
+           <button onclick="clicked()">CLICK ME </button>
+
+       </div>
+        <script>
+            function display()
+            {
+                document.write('I was called...')
+            }
+            display();
+       
+            function clicked(bele){
+                var ele = document.getElementById('time');
+                ele.innerHTML = 'Time : ' + new Date().toLocaleTimeString();
+                ele.style.color='crimson';
+                document.body.style.backgroundColor='#09A999';
+            }
+			 
+        </script>
+    </body>
+</html>
